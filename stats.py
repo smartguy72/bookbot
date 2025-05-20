@@ -14,4 +14,13 @@ def get_character_count(text):
             character_count[character] = 1
     return character_count
 
+########## WORKING BELOW ############
+def character_count_dict_to_list(character_count):
+    char_list = []
+    for character in character_count:
+        char_list.append({"char": character, "num": character_count[character]})
+    char_list.sort(reverse=True, key=sort_by)
+    return char_list
 
+def sort_by(char_list):
+    return char_list["num"]
